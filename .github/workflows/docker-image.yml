@@ -32,9 +32,9 @@ jobs:
       # 构建 Docker 镜像
       - name: Build Docker image
         run: |
-          docker build --build-arg HUGO_VERSION=0.140.1 -t registry.cn-hongkong.aliyuncs.com/yzhub/kubernetes -website:latest .
+          docker build --build-arg HUGO_VERSION=0.140.1 -t registry.cn-hongkong.aliyuncs.com/yzhub/kubernetes-website:latest .
 
       # 推送 Docker 镜像到阿里云
       - name: Push Docker image
         run: |
-          docker push registry.cn-hongkong.aliyuncs.com/yzhub/kubernetes -website:latest
+          docker push registry.cn-hongkong.aliyuncs.com/yzhub/kubernetes-website:latest
